@@ -15,6 +15,7 @@
 ***
 ### ***Getting Started***
 ***
+<!-- not quite sure what to put here - is this what I need to do to get started on the project? or what the user would need to do to start playing the game? -->
 
 ### ***Screenshots***
 #### 
