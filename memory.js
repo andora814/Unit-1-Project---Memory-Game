@@ -14,14 +14,14 @@ let cardImages = ['dog', 'dog', 'cat', 'cat'];
 
 //////// Functions ////////
 
-const shuffleArray = (cardImages) => {
+function shuffleArray(cardImages) {
   for (let i = cardImages.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     const temp = cardImages[i];
     cardImages[i] = cardImages[j];
     cardImages[j] = temp;
   }
-};
+}
 
 console.log('ORIGINAL: ' + cardImages);
 
@@ -35,7 +35,16 @@ function cardClicked() {
       if (clickCount < 2) {
         buttons[i].innerText = cardImages[i];
         clickCount++;
-        console.log('clickCount is ' + clickCount);
+        if (clickCount === 1) {
+          console.log(`clickCount is ${clickCount}`);
+          firstCardClicked = cardImages[i];
+          console.log(`firstCardClicked is ${cardImages[i]}`);
+        }
+        if (clickCount === 2) {
+          console.log(`clickCount is ${clickCount}`);
+          secondCardClicked = cardImages[i];
+          console.log(`secondCardClicked is ${cardImages[i]}`);
+        }
       } else {
         playOver = true;
       }
