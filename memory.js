@@ -8,8 +8,8 @@ let match = false;
 let playOver = false;
 let gameOver = false;
 let clickCount = 0;
-let firstCardClicked = false;
-let secondCardClicked = false;
+let firstCardClicked = '';
+let secondCardClicked = '';
 let cardImages = ['dog', 'dog', 'cat', 'cat'];
 
 //////// Functions ////////
@@ -22,12 +22,18 @@ function shuffleArray(cardImages) {
     cardImages[j] = temp;
   }
 }
-
 console.log('ORIGINAL: ' + cardImages);
-
 shuffleArray(cardImages);
-
 console.log('SHUFFLED: ' + cardImages);
+
+function cardsMatch() {
+  if (firstCardClicked === secondCardClicked) {
+    match = true;
+    return;
+  }
+  match = false;
+  return;
+}
 
 function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
@@ -38,12 +44,14 @@ function cardClicked() {
         if (clickCount === 1) {
           console.log(`clickCount is ${clickCount}`);
           firstCardClicked = cardImages[i];
-          console.log(`firstCardClicked is ${cardImages[i]}`);
+          console.log(`firstCardClicked is ${firstCardClicked}`);
         }
         if (clickCount === 2) {
           console.log(`clickCount is ${clickCount}`);
           secondCardClicked = cardImages[i];
-          console.log(`secondCardClicked is ${cardImages[i]}`);
+          console.log(`secondCardClicked is ${secondCardClicked}`);
+          cardsMatch();
+          console.log(match);
         }
       } else {
         playOver = true;
