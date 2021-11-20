@@ -80,12 +80,10 @@ function cardClicked() {
             doneArray.push(secondCardClicked);
             document.querySelector('#buttonOne').style.backgroundColor =
               'green';
-            // will need to simplify this and make it DRY //
-            if (doneArray[0] === buttons[0]) {
-              buttons.splice(index, i);
-              console.log(`buttons contains: ${buttons}`);
-              console.log(`cardImages contains: ${cardImages}`);
-            }
+            document.querySelector('#buttonTwo').style.backgroundColor =
+              'green';
+            document.querySelector('#buttonOne').style.color = 'green';
+            document.querySelector('#buttonTwo').style.color = 'green';
             console.log(firstCardClicked, secondCardClicked);
             console.log(doneArray);
             // need to figure out WHICH cards were clicked so I can interact with the DOM...//
