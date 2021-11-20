@@ -13,6 +13,8 @@ let gameOver = false;
 let clickCount = 0;
 let firstCardClicked = '';
 let secondCardClicked = '';
+let firstButtonClicked;
+let secondButtonClicked;
 
 let cardImages = ['dog', 'dog', 'cat', 'cat'];
 let doneArray = [];
@@ -60,32 +62,32 @@ function cardClicked() {
         buttons[i].innerText = cardImages[i];
         clickCount++;
         if (clickCount === 1) {
-          console.log(`clickCount is ${clickCount}`);
+          // console.log(`clickCount is ${clickCount}`);
           firstCardClicked = cardImages[i];
-          console.log(`firstCardClicked is ${firstCardClicked}`);
-          const firstButtonClicked = event.target.id;
+          // console.log(`firstCardClicked is ${firstCardClicked}`);
+          firstButtonClicked = event.target.id;
           console.log(`firstButtonClicked is ${firstButtonClicked}`);
         }
         if (clickCount === 2) {
-          console.log(`clickCount is ${clickCount}`);
+          // console.log(`clickCount is ${clickCount}`);
           secondCardClicked = cardImages[i];
-          console.log(`secondCardClicked is ${secondCardClicked}`);
-          console.log(`second event target is ${event.target.id}`);
-          const secondButtonClicked = event.target.id;
-          console.log(secondButtonClicked);
+          // console.log(`secondCardClicked is ${secondCardClicked}`);
+          // console.log(`second event target is ${event.target.id}`);
+          secondButtonClicked = event.target.id;
+          console.log(`secondButtonClicked is ${secondButtonClicked}`);
           cardsMatch();
           console.log(`is there a match? ${match}`);
           if (match === true) {
-            doneArray.push(firstCardClicked);
-            doneArray.push(secondCardClicked);
-            document.querySelector('#buttonOne').style.backgroundColor =
+            // doneArray.push(firstCardClicked);
+            // doneArray.push(secondCardClicked);
+            document.getElementById(firstButtonClicked).style.backgroundColor =
               'green';
-            document.querySelector('#buttonTwo').style.backgroundColor =
+            document.getElementById(secondButtonClicked).style.backgroundColor =
               'green';
-            document.querySelector('#buttonOne').style.color = 'green';
-            document.querySelector('#buttonTwo').style.color = 'green';
-            console.log(firstCardClicked, secondCardClicked);
-            console.log(doneArray);
+            document.getElementById(firstButtonClicked).style.color = 'green';
+            document.getElementById(secondButtonClicked).style.color = 'green';
+            // console.log(firstCardClicked, secondCardClicked);
+            // console.log(doneArray);
             // need to figure out WHICH cards were clicked so I can interact with the DOM...//
             return;
           } else {
