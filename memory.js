@@ -16,10 +16,24 @@ let secondCardClicked = '';
 let firstButtonClicked;
 let secondButtonClicked;
 
-let cardImages = ['dog', 'dog', 'cat', 'cat'];
-let doneArray = [];
-let blankArray = [];
-// let doneArray = ['done', 'done', 'done', 'done'];
+let cardImages = [
+  'dog',
+  'dog',
+  'cat',
+  'cat',
+  'fish',
+  'fish',
+  'cow',
+  'cow',
+  'rabbit',
+  'rabbit',
+  'bird',
+  'bird',
+  'turtle',
+  'turtle',
+  'horse',
+  'horse'
+];
 let flippedCards = [firstCardClicked, secondCardClicked];
 
 //////// Functions ////////
@@ -59,45 +73,32 @@ function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerText = cardImages[i];
     buttons[i].style.backgroundColor = 'white';
-    buttons[i].style.color = 'white';
+    // buttons[i].style.color = 'white'; //comment this out to see cards "face up"
     buttons[i].addEventListener('click', (event) => {
       if (clickCount < 2) {
         clickCount++;
         if (clickCount === 1) {
-          // console.log(`clickCount is ${clickCount}`);
-          // firstCardClicked = cardImages[i];
+          firstCardClicked = cardImages[i];
           firstButtonClicked = event.target.id;
           document.getElementById(firstButtonClicked).style.color = 'black';
-          // console.log(`firstCardClicked is ${firstCardClicked}`);
-          console.log(`firstButtonClicked is ${firstButtonClicked}`);
         }
         if (clickCount === 2) {
-          // console.log(`clickCount is ${clickCount}`);
-          // secondCardClicked = cardImages[i];
+          secondCardClicked = cardImages[i];
           secondButtonClicked = event.target.id;
           document.getElementById(secondButtonClicked).style.color = 'black';
-          // console.log(`secondCardClicked is ${secondCardClicked}`);
-          // console.log(`second event target is ${event.target.id}`);
-          console.log(`secondButtonClicked is ${secondButtonClicked}`);
           cardsMatch();
-          console.log(`is there a match? ${match}`);
           if (match === true) {
-            // doneArray.push(firstCardClicked);
-            // doneArray.push(secondCardClicked);
+            // this makes the cards "disappear" or turn green when they match
             document.getElementById(firstButtonClicked).style.backgroundColor =
               'green';
             document.getElementById(secondButtonClicked).style.backgroundColor =
               'green';
             document.getElementById(firstButtonClicked).style.color = 'green';
             document.getElementById(secondButtonClicked).style.color = 'green';
-            // console.log(firstCardClicked, secondCardClicked);
-            // console.log(doneArray);
-            // need to figure out WHICH cards were clicked so I can interact with the DOM...//
             clickCount = 0;
             return;
           } else {
-            firstCardClicked = blankArray[i];
-            secondCardClicked = blankArray[i];
+            //this makes the cards "flip over" or turn white when they don't match
             document.getElementById(firstButtonClicked).style.color = 'white';
             document.getElementById(secondButtonClicked).style.color = 'white';
             clickCount = 0;
