@@ -57,23 +57,27 @@ function cardsMatch() {
 
 function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
+    buttons[i].innerText = cardImages[i];
+    buttons[i].style.backgroundColor = 'white';
+    buttons[i].style.color = 'white';
     buttons[i].addEventListener('click', (event) => {
       if (clickCount < 2) {
-        buttons[i].innerText = cardImages[i];
         clickCount++;
         if (clickCount === 1) {
           // console.log(`clickCount is ${clickCount}`);
-          firstCardClicked = cardImages[i];
-          // console.log(`firstCardClicked is ${firstCardClicked}`);
+          // firstCardClicked = cardImages[i];
           firstButtonClicked = event.target.id;
+          document.getElementById(firstButtonClicked).style.color = 'black';
+          // console.log(`firstCardClicked is ${firstCardClicked}`);
           console.log(`firstButtonClicked is ${firstButtonClicked}`);
         }
         if (clickCount === 2) {
           // console.log(`clickCount is ${clickCount}`);
-          secondCardClicked = cardImages[i];
+          // secondCardClicked = cardImages[i];
+          secondButtonClicked = event.target.id;
+          document.getElementById(secondButtonClicked).style.color = 'black';
           // console.log(`secondCardClicked is ${secondCardClicked}`);
           // console.log(`second event target is ${event.target.id}`);
-          secondButtonClicked = event.target.id;
           console.log(`secondButtonClicked is ${secondButtonClicked}`);
           cardsMatch();
           console.log(`is there a match? ${match}`);
@@ -94,6 +98,10 @@ function cardClicked() {
           } else {
             firstCardClicked = blankArray[i];
             secondCardClicked = blankArray[i];
+            document.getElementById(firstButtonClicked).style.color = 'white';
+            document.getElementById(secondButtonClicked).style.color = 'white';
+            clickCount = 0;
+            return;
           }
         }
       } else {
