@@ -6,12 +6,7 @@ const cards = document.querySelector('.card');
 const buttons = document.querySelectorAll('.button');
 const replay = document.querySelector('#replay');
 let matchMessage = document.querySelector('#matchMessage');
-// const imageOne = document.querySelector('#imageOne');
-// imageOne.src =
-//   'https://cdn.vectorstock.com/i/thumb-large/78/18/cute-carrot-character-isolated-element-vector-31257818.webp';
-// const imageTwo = document.querySelector('#imageTwo');
-// const imageThree = document.querySelector('#imageThree');
-// const imageFour = document.querySelector('#imageFour');
+
 let match = false;
 let playOver = false;
 let gameOver = false;
@@ -68,24 +63,29 @@ function cardClicked() {
           console.log(`clickCount is ${clickCount}`);
           firstCardClicked = cardImages[i];
           console.log(`firstCardClicked is ${firstCardClicked}`);
-          console.log(`event target is ${event.target.innerText}`);
+          const firstButtonClicked = event.target.id;
+          console.log(`firstButtonClicked is ${firstButtonClicked}`);
         }
         if (clickCount === 2) {
           console.log(`clickCount is ${clickCount}`);
           secondCardClicked = cardImages[i];
           console.log(`secondCardClicked is ${secondCardClicked}`);
-          console.log(`event target is ${event.target.innerText}`);
+          console.log(`second event target is ${event.target.id}`);
+          const secondButtonClicked = event.target.id;
+          console.log(secondButtonClicked);
           cardsMatch();
+          console.log(`is there a match? ${match}`);
           if (match === true) {
             doneArray.push(firstCardClicked);
             doneArray.push(secondCardClicked);
+            document.querySelector('#buttonOne').style.backgroundColor =
+              'green';
             // will need to simplify this and make it DRY //
             if (doneArray[0] === buttons[0]) {
               buttons.splice(index, i);
-              console.log(buttons);
-              console.log(cardImages);
+              console.log(`buttons contains: ${buttons}`);
+              console.log(`cardImages contains: ${cardImages}`);
             }
-
             console.log(firstCardClicked, secondCardClicked);
             console.log(doneArray);
             // need to figure out WHICH cards were clicked so I can interact with the DOM...//
@@ -93,7 +93,6 @@ function cardClicked() {
           } else {
             firstCardClicked = blankArray[i];
             secondCardClicked = blankArray[i];
-            console.log(match);
           }
         }
       } else {
