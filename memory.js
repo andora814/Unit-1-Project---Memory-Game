@@ -89,6 +89,7 @@ function cardClicked() {
             // console.log(firstCardClicked, secondCardClicked);
             // console.log(doneArray);
             // need to figure out WHICH cards were clicked so I can interact with the DOM...//
+            clickCount = 0;
             return;
           } else {
             firstCardClicked = blankArray[i];
