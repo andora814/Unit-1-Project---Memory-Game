@@ -21,7 +21,7 @@ let secondCardClicked = '';
 
 let cardImages = ['dog', 'dog', 'cat', 'cat'];
 let doneArray = [];
-let blankArray = ['', '', '', '', ''];
+let blankArray = [];
 // let doneArray = ['done', 'done', 'done', 'done'];
 let flippedCards = [firstCardClicked, secondCardClicked];
 
@@ -50,7 +50,6 @@ console.log('SHUFFLED: ' + cardImages);
 function cardsMatch() {
   if (firstCardClicked === secondCardClicked) {
     match = true;
-    // what does the red circle mean?
     return;
     matchMessage.innerText = 'You have a match!';
     // why is this "unreachable code?"
@@ -61,26 +60,35 @@ function cardsMatch() {
 
 function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', () => {
+    buttons[i].addEventListener('click', (event) => {
       if (clickCount < 2) {
         buttons[i].innerText = cardImages[i];
         clickCount++;
         if (clickCount === 1) {
           console.log(`clickCount is ${clickCount}`);
-          // what does the red circle mean?
           firstCardClicked = cardImages[i];
           console.log(`firstCardClicked is ${firstCardClicked}`);
+          console.log(`event target is ${event.target.innerText}`);
         }
         if (clickCount === 2) {
           console.log(`clickCount is ${clickCount}`);
           secondCardClicked = cardImages[i];
           console.log(`secondCardClicked is ${secondCardClicked}`);
+          console.log(`event target is ${event.target.innerText}`);
           cardsMatch();
           if (match === true) {
             doneArray.push(firstCardClicked);
             doneArray.push(secondCardClicked);
+            // will need to simplify this and make it DRY //
+            if (doneArray[0] === buttons[0]) {
+              buttons.splice(index, i);
+              console.log(buttons);
+              console.log(cardImages);
+            }
+
             console.log(firstCardClicked, secondCardClicked);
             console.log(doneArray);
+            // need to figure out WHICH cards were clicked so I can interact with the DOM...//
             return;
           } else {
             firstCardClicked = blankArray[i];
@@ -97,10 +105,6 @@ function cardClicked() {
 
 cardClicked();
 playAgain();
-
-// Example of how to shuffle an array:
-// https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
-// Math.floor rounds down to nearest integer
 
 // 12 cartoon foods:
 // carrot: https://cdn.vectorstock.com/i/thumb-large/78/18/cute-carrot-character-isolated-element-vector-31257818.webp
