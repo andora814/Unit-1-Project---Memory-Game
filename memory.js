@@ -74,12 +74,21 @@ console.log('SHUFFLED: ' + cardImages);
 function cardsMatch() {
   if (firstCardClicked === secondCardClicked) {
     match = true;
-    return;
+    document.getElementById(firstButtonClicked).style.backgroundColor = 'green';
+    document.getElementById(secondButtonClicked).style.backgroundColor =
+      'green';
+    document.getElementById(firstButtonClicked).style.color = 'green';
+    document.getElementById(secondButtonClicked).style.color = 'green';
+    clickCount = 0;
     matchMessage.innerText = 'You have a match!';
-    // why is this "unreachable code?"
+    return;
+  } else {
+    match = false;
+    document.getElementById(firstButtonClicked).style.color = 'white';
+    document.getElementById(secondButtonClicked).style.color = 'white';
+    clickCount = 0;
+    return;
   }
-  match = false;
-  return;
 }
 
 function cardClicked() {
@@ -100,23 +109,6 @@ function cardClicked() {
           secondButtonClicked = event.target.id;
           document.getElementById(secondButtonClicked).style.color = 'black';
           cardsMatch();
-          if (match === true) {
-            // this makes the cards "disappear" or turn green when they match
-            document.getElementById(firstButtonClicked).style.backgroundColor =
-              'green';
-            document.getElementById(secondButtonClicked).style.backgroundColor =
-              'green';
-            document.getElementById(firstButtonClicked).style.color = 'green';
-            document.getElementById(secondButtonClicked).style.color = 'green';
-            clickCount = 0;
-            return;
-          } else {
-            //this makes the cards "flip over" or turn white when they don't match
-            document.getElementById(firstButtonClicked).style.color = 'white';
-            document.getElementById(secondButtonClicked).style.color = 'white';
-            clickCount = 0;
-            return;
-          }
         }
       } else {
         playOver = true;
