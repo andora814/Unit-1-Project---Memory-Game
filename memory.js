@@ -15,6 +15,7 @@ let firstCardClicked = '';
 let secondCardClicked = '';
 let firstButtonClicked;
 let secondButtonClicked;
+let delay;
 
 let cardImages = [
   'dog',
@@ -91,6 +92,10 @@ function cardsMatch() {
   }
 }
 
+function timeDelay() {
+  delay = setTimeout(cardsMatch, 1500);
+}
+
 function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerText = cardImages[i];
@@ -108,7 +113,7 @@ function cardClicked() {
           secondCardClicked = cardImages[i];
           secondButtonClicked = event.target.id;
           document.getElementById(secondButtonClicked).style.color = 'black';
-          cardsMatch();
+          timeDelay();
         }
       } else {
         playOver = true;
