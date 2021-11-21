@@ -88,6 +88,7 @@ function cardsMatch() {
     document.getElementById(firstButtonClicked).style.color = 'white';
     document.getElementById(secondButtonClicked).style.color = 'white';
     clickCount = 0;
+    matchMessage.innerText = 'Try again!';
     return;
   }
 }
