@@ -43,6 +43,19 @@ function playAgain() {
     buttons[1].innerText = '';
     buttons[2].innerText = '';
     buttons[3].innerText = '';
+    buttons[4].innerText = '';
+    buttons[5].innerText = '';
+    buttons[6].innerText = '';
+    buttons[7].innerText = '';
+    buttons[8].innerText = '';
+    buttons[9].innerText = '';
+    buttons[10].innerText = '';
+    buttons[11].innerText = '';
+    buttons[12].innerText = '';
+    buttons[13].innerText = '';
+    buttons[14].innerText = '';
+    buttons[15].innerText = '';
+    clickCount = 0;
   });
 }
 
@@ -73,7 +86,7 @@ function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerText = cardImages[i];
     buttons[i].style.backgroundColor = 'white';
-    // buttons[i].style.color = 'white'; //comment this out to see cards "face up"
+    buttons[i].style.color = 'white'; //comment this out to see cards "face up"
     buttons[i].addEventListener('click', (event) => {
       if (clickCount < 2) {
         clickCount++;
