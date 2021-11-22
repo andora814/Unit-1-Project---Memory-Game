@@ -155,6 +155,8 @@ function cardClicked() {
         document.getElementById(
           firstButtonClicked
         ).style.backgroundImage = `url(${cardImages[i]})`;
+        document.getElementById(firstButtonClicked).style.backgroundSize =
+          '100px 120px';
         document.getElementById(firstButtonClicked).disabled = true;
         console.log(firstCardClicked);
         console.log(firstButtonClicked);
@@ -164,6 +166,8 @@ function cardClicked() {
         document.getElementById(
           secondButtonClicked
         ).style.backgroundImage = `url(${cardImages[i]})`;
+        document.getElementById(secondButtonClicked).style.backgroundSize =
+          '100px 120px';
         timeDelay();
         document.getElementById(firstButtonClicked).disabled = false;
       }
