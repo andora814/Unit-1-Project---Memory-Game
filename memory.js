@@ -59,6 +59,7 @@ function playAgain() {
     buttons[14].innerText = '';
     buttons[15].innerText = '';
     clickCount = 0;
+    console.log(clickCount);
     cardClicked();
   });
 }
@@ -79,12 +80,14 @@ function cardsMatch() {
   if (firstCardClicked === secondCardClicked) {
     match = true;
     matchMessage.innerText = 'You have a match!';
-    document.getElementById(firstButtonClicked).style.backgroundColor = 'green';
+    document.getElementById(firstButtonClicked).style.backgroundColor =
+      '#0f06ff';
     document.getElementById(secondButtonClicked).style.backgroundColor =
-      'green';
-    document.getElementById(firstButtonClicked).style.color = 'green';
-    document.getElementById(secondButtonClicked).style.color = 'green';
-    document.getElementById(firstButtonClicked).disabled = true;
+      '#0f06ff';
+    document.getElementById(firstButtonClicked).style.color = '#0f06ff';
+    document.getElementById(secondButtonClicked).style.color = '#0f06ff';
+    document.getElementById(firstButtonClicked).style.color = '#0f06ff';
+    document.getElementById(secondButtonClicked).style.color = '#0f06ff';
     document.getElementById(secondButtonClicked).disabled = true;
     clickCount = 0;
     doneArray.push(firstButtonClicked);
@@ -121,33 +124,27 @@ function cardClicked() {
     buttons[i].style.backgroundColor = 'white';
     buttons[i].style.color = 'white'; //comment this out to see cards "face up"
     buttons[i].addEventListener('click', (event) => {
-      if (clickCount < 2) {
-        clickCount++;
-        if (clickCount === 1) {
-          firstCardClicked = cardImages[i];
-          firstButtonClicked = event.target.id;
-          document.getElementById(firstButtonClicked).style.color = 'black';
-          console.log(clickCount);
-          document.getElementById(firstButtonClicked).disabled = true;
-        }
-        if (clickCount === 2) {
-          secondCardClicked = cardImages[i];
-          secondButtonClicked = event.target.id;
-          document.getElementById(secondButtonClicked).style.color = 'black';
-          timeDelay();
-          console.log(clickCount);
-          document.getElementById(firstButtonClicked).disabled = false;
-        }
-      } else {
-        playOver = true;
-        playAgain();
+      clickCount++;
+      if (clickCount === 1) {
+        firstCardClicked = cardImages[i];
+        firstButtonClicked = event.target.id;
+        document.getElementById(firstButtonClicked).style.color = '#0f06ff';
+        console.log(clickCount);
+        document.getElementById(firstButtonClicked).disabled = true;
+      } else if (clickCount === 2) {
+        secondCardClicked = cardImages[i];
+        secondButtonClicked = event.target.id;
+        document.getElementById(secondButtonClicked).style.color = '#0f06ff';
+        timeDelay();
+        console.log(clickCount);
+        document.getElementById(firstButtonClicked).disabled = false;
       }
     });
   }
+  playAgain();
 }
 
 cardClicked();
-playAgain();
 
 // 12 cartoon foods:
 // carrot: https://cdn.vectorstock.com/i/thumb-large/78/18/cute-carrot-character-isolated-element-vector-31257818.webp
