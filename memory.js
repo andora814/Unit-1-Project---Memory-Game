@@ -17,7 +17,6 @@ let firstButtonClicked;
 let secondButtonClicked;
 let delay;
 let doneArray = [];
-
 let cardImages = [
   'dog',
   'dog',
@@ -85,6 +84,8 @@ function cardsMatch() {
       'green';
     document.getElementById(firstButtonClicked).style.color = 'green';
     document.getElementById(secondButtonClicked).style.color = 'green';
+    document.getElementById(firstButtonClicked).disabled = true;
+    document.getElementById(secondButtonClicked).disabled = true;
     clickCount = 0;
     doneArray.push(firstButtonClicked);
     doneArray.push(secondButtonClicked);
@@ -127,6 +128,7 @@ function cardClicked() {
           firstButtonClicked = event.target.id;
           document.getElementById(firstButtonClicked).style.color = 'black';
           console.log(clickCount);
+          document.getElementById(firstButtonClicked).disabled = true;
         }
         if (clickCount === 2) {
           secondCardClicked = cardImages[i];
@@ -134,6 +136,7 @@ function cardClicked() {
           document.getElementById(secondButtonClicked).style.color = 'black';
           timeDelay();
           console.log(clickCount);
+          document.getElementById(firstButtonClicked).disabled = false;
         }
       } else {
         playOver = true;
