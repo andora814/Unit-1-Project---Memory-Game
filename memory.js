@@ -17,6 +17,8 @@ let firstButtonClicked;
 let secondButtonClicked;
 let delay;
 let doneArray = [];
+let carrot =
+  'https://cdn.vectorstock.com/i/thumb-large/78/18/cute-carrot-character-isolated-element-vector-31257818.webp';
 let cardImages = [
   'dog',
   'dog',
@@ -70,12 +72,11 @@ function cardsMatch() {
   if (firstCardClicked === secondCardClicked) {
     match = true;
     matchMessage.innerText = 'You have a match!';
-    document.getElementById(firstButtonClicked).style.backgroundColor =
-      '#0f06ff';
+    document.getElementById(firstButtonClicked).style.backgroundColor = 'black';
     document.getElementById(secondButtonClicked).style.backgroundColor =
-      '#0f06ff';
-    document.getElementById(firstButtonClicked).style.color = '#0f06ff';
-    document.getElementById(secondButtonClicked).style.color = '#0f06ff';
+      'black';
+    document.getElementById(firstButtonClicked).style.color = 'black';
+    document.getElementById(secondButtonClicked).style.color = 'black';
     document.getElementById(firstButtonClicked).disabled = true;
     document.getElementById(secondButtonClicked).disabled = true;
     clickCount = 0;
@@ -114,12 +115,12 @@ function cardClicked() {
       if (clickCount === 1) {
         firstCardClicked = cardImages[i];
         firstButtonClicked = event.target.id;
-        document.getElementById(firstButtonClicked).style.color = '#0f06ff';
+        document.getElementById(firstButtonClicked).style.color = 'black';
         document.getElementById(firstButtonClicked).disabled = true;
       } else if (clickCount === 2) {
         secondCardClicked = cardImages[i];
         secondButtonClicked = event.target.id;
-        document.getElementById(secondButtonClicked).style.color = '#0f06ff';
+        document.getElementById(secondButtonClicked).style.color = 'black';
         timeDelay();
         document.getElementById(firstButtonClicked).disabled = false;
       }
@@ -144,4 +145,4 @@ cardClicked();
 // beet: https://cdn.vectorstock.com/i/thumb-large/48/74/purple-beet-with-a-face-on-a-white-background-vector-35664874.webp
 // lemon: https://cdn.vectorstock.com/i/thumb-large/20/29/cute-smiling-lemon-isolated-colorful-fruit-vector-28362029.webp
 // cherry: https://cdn.vectorstock.com/i/thumb-large/75/01/cute-happy-red-cherry-character-vector-31917501.webp
-//
+// picnic blanket background : https://thumbs.dreamstime.com/b/red-crumpled-linen-gingham-picnic-tablecloth-white-30754821.jpg

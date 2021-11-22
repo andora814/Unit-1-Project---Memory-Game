@@ -4,22 +4,22 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 8px;
   margin: auto;
-  background-color: #0f06ff;
+  background-color: black;
   height: 75vh;
   width: 75vh;
   justify-content: center;
   margin: 0;
   margin: auto; 
   padding: auto;
-  border: 20px solid #0f06ff;
+  border: 20px solid black;
   font-family: monospace, monaco;
 }
 
 h1 {
   border: 20px white;
-  color: #0f06ff;
+  color: #c50b25;
   background-color: white;
-  border-color: #0f06ff;
+  border-color: black;
   border-style: solid;
 }
 
@@ -35,28 +35,28 @@ h1 {
 
 body {
   background-color: white;
-  color: #0f06ff;
+  color: black;
   text-align: center;
   margin: auto;
-  background-image: url("https://thumbs.dreamstime.com/b/seamless-question-marks-colorful-pattern-texture-rainbow-geometric-97217834.jpg");
-  background-size: 400px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.MUepdF91mlt5pV3bcBmk9gHaGw%26pid%3DApi&f=1");
+  background-size: 1500px;
   font-family: monospace, monaco;
 }
 
 p {
   border-style: none;
   background-color: white;
-  color:  #0f06ff;
+  color:  #c50b25;
   text-align: center;
   font-size: 20px;
-  border-color: #0f06ff;
+  border-color: black;
   border-style: solid;
 }
 
 .button {
   grid-area: 1 / 1 / 5 / 5;
   background-color: white;
-  color: #0f06ff;
+  color: black;
   text-align: center;
   border-style: none;
   width: 100%;
@@ -72,10 +72,10 @@ p {
 #replay {
   border-style: none;
   background-color: white;
-  color:  #0f06ff;
+  color:  #c50b25;
   text-align: center;
   font-size: 20px;
-  border-color: #0f06ff;
+  border-color: black;
   border-style: solid;
 }
 /* 
