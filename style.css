@@ -27,8 +27,8 @@ h1 {
   background-color: white;
   text-align: center;
   margin: auto;
-  width: 75%;
-  height: 100%;
+  width: 100px;
+  height: 120px;
   margin: auto;
   /* border-radius: 25px; rounds the corners */
 }
@@ -78,9 +78,5 @@ p {
   border-color: black;
   border-style: solid;
 }
-/* 
-.white {
-  background-color: white;
-} */
 
 
