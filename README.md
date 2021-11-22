@@ -25,7 +25,7 @@
 <!-- I will replace the Memory Game picture with a picture of my own game once it's completed -->
 ***
 ### ***Future Updates***
-- [ ] Add sound effects
+- [ ] Sound effects
 - [ ] Various levels of difficulty
 - [ ] Timer
 ***
