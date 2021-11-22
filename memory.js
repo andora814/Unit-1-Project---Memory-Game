@@ -6,7 +6,6 @@ const cards = document.querySelector('.card');
 const buttons = document.querySelectorAll('.button');
 const replay = document.querySelector('#replay');
 let matchMessage = document.querySelector('#matchMessage');
-
 let match = false;
 let playOver = false;
 let gameOver = false;
@@ -14,6 +13,7 @@ let clickCount = 0;
 let firstCardClicked = '';
 let secondCardClicked = '';
 let firstButtonClicked;
+// set this equal to document.query to clean it up
 let secondButtonClicked;
 let delay;
 let doneArray = [];
@@ -42,25 +42,8 @@ function playAgain() {
   replay.addEventListener('click', () => {
     shuffleArray(cardImages);
     console.log('SHUFFLED: ' + cardImages);
-    buttons[0].innerText = '';
-    buttons[1].innerText = '';
-    buttons[2].innerText = '';
-    buttons[3].innerText = '';
-    buttons[4].innerText = '';
-    buttons[5].innerText = '';
-    buttons[6].innerText = '';
-    buttons[7].innerText = '';
-    buttons[8].innerText = '';
-    buttons[9].innerText = '';
-    buttons[10].innerText = '';
-    buttons[11].innerText = '';
-    buttons[12].innerText = '';
-    buttons[13].innerText = '';
-    buttons[14].innerText = '';
-    buttons[15].innerText = '';
     clickCount = 0;
     console.log(clickCount);
-    cardClicked();
   });
 }
 
@@ -71,7 +54,14 @@ function shuffleArray(cardImages) {
     cardImages[i] = cardImages[j];
     cardImages[j] = temp;
   }
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].innerText = cardImages[i];
+    buttons[i].style.backgroundColor = 'white';
+    buttons[i].style.color = 'white'; //comment this out to see cards "face up"
+    buttons[i].disabled = false;
+  }
 }
+
 console.log('ORIGINAL: ' + cardImages);
 shuffleArray(cardImages);
 console.log('SHUFFLED: ' + cardImages);
@@ -120,9 +110,6 @@ function checkForWinner() {
 
 function cardClicked() {
   for (let i = 0; i < buttons.length; i++) {
-    buttons[i].innerText = cardImages[i];
-    buttons[i].style.backgroundColor = 'white';
-    buttons[i].style.color = 'white'; //comment this out to see cards "face up"
     buttons[i].addEventListener('click', (event) => {
       clickCount++;
       if (clickCount === 1) {
@@ -156,6 +143,8 @@ cardClicked();
 // grapes: https://cdn.vectorstock.com/i/thumb-large/19/58/grapes-cute-kawaii-character-vector-29111958.webp
 // banana: https://cdn.vectorstock.com/i/thumb-large/93/94/cute-banana-with-happy-funny-face-tropical-fruit-vector-40089394.webp
 // broccoli: https://cdn.vectorstock.com/i/thumb-large/25/56/cute-cartoon-broccoli-vector-22022556.webp
-// egg: https://cdn.vectorstock.com/i/thumb-large/95/42/egg-icon-kawaii-logo-a-food-vector-38099542.webp
-// almond: https://cdn.vectorstock.com/i/thumb-large/44/39/cute-almond-on-a-white-background-vector-35664439.webp
+// watermelon: https://cdn.vectorstock.com/i/thumb-large/30/38/cute-smiling-watermelon-isolated-colorful-vector-36283038.webp
+// beet: https://cdn.vectorstock.com/i/thumb-large/48/74/purple-beet-with-a-face-on-a-white-background-vector-35664874.webp
 // lemon: https://cdn.vectorstock.com/i/thumb-large/20/29/cute-smiling-lemon-isolated-colorful-fruit-vector-28362029.webp
+// cherry: https://cdn.vectorstock.com/i/thumb-large/75/01/cute-happy-red-cherry-character-vector-31917501.webp
+//
