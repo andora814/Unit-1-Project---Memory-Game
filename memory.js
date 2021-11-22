@@ -16,6 +16,7 @@ let secondCardClicked = '';
 let firstButtonClicked;
 let secondButtonClicked;
 let delay;
+let doneArray = [];
 
 let cardImages = [
   'dog',
@@ -40,6 +41,8 @@ let flippedCards = [firstCardClicked, secondCardClicked];
 //////// Functions ////////
 function playAgain() {
   replay.addEventListener('click', () => {
+    shuffleArray(cardImages);
+    console.log('SHUFFLED: ' + cardImages);
     buttons[0].innerText = '';
     buttons[1].innerText = '';
     buttons[2].innerText = '';
@@ -57,6 +60,7 @@ function playAgain() {
     buttons[14].innerText = '';
     buttons[15].innerText = '';
     clickCount = 0;
+    cardClicked();
   });
 }
 
@@ -75,26 +79,29 @@ console.log('SHUFFLED: ' + cardImages);
 function cardsMatch() {
   if (firstCardClicked === secondCardClicked) {
     match = true;
+    matchMessage.innerText = 'You have a match!';
     document.getElementById(firstButtonClicked).style.backgroundColor = 'green';
     document.getElementById(secondButtonClicked).style.backgroundColor =
       'green';
     document.getElementById(firstButtonClicked).style.color = 'green';
     document.getElementById(secondButtonClicked).style.color = 'green';
     clickCount = 0;
-    matchMessage.innerText = 'You have a match!';
+    doneArray.push(firstButtonClicked);
+    doneArray.push(secondButtonClicked);
+    console.log(doneArray);
     return;
   } else {
     match = false;
+    matchMessage.innerText = 'Try again!';
     document.getElementById(firstButtonClicked).style.color = 'white';
     document.getElementById(secondButtonClicked).style.color = 'white';
     clickCount = 0;
-    matchMessage.innerText = 'Try again!';
     return;
   }
 }
 
 function timeDelay() {
-  delay = setTimeout(cardsMatch, 1500);
+  delay = setTimeout(cardsMatch, 1000);
 }
 
 function cardClicked() {
@@ -109,15 +116,18 @@ function cardClicked() {
           firstCardClicked = cardImages[i];
           firstButtonClicked = event.target.id;
           document.getElementById(firstButtonClicked).style.color = 'black';
+          console.log(clickCount);
         }
         if (clickCount === 2) {
           secondCardClicked = cardImages[i];
           secondButtonClicked = event.target.id;
           document.getElementById(secondButtonClicked).style.color = 'black';
           timeDelay();
+          console.log(clickCount);
         }
       } else {
         playOver = true;
+        playAgain();
       }
     });
   }
