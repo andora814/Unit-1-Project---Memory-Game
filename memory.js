@@ -43,7 +43,7 @@ function playAgain() {
     shuffleArray(cardImages);
     console.log('SHUFFLED: ' + cardImages);
     clickCount = 0;
-    console.log(clickCount);
+    matchMessage.innerText = 'Good Luck!';
   });
 }
 
@@ -76,8 +76,7 @@ function cardsMatch() {
       '#0f06ff';
     document.getElementById(firstButtonClicked).style.color = '#0f06ff';
     document.getElementById(secondButtonClicked).style.color = '#0f06ff';
-    document.getElementById(firstButtonClicked).style.color = '#0f06ff';
-    document.getElementById(secondButtonClicked).style.color = '#0f06ff';
+    document.getElementById(firstButtonClicked).disabled = true;
     document.getElementById(secondButtonClicked).disabled = true;
     clickCount = 0;
     doneArray.push(firstButtonClicked);
@@ -116,14 +115,12 @@ function cardClicked() {
         firstCardClicked = cardImages[i];
         firstButtonClicked = event.target.id;
         document.getElementById(firstButtonClicked).style.color = '#0f06ff';
-        console.log(clickCount);
         document.getElementById(firstButtonClicked).disabled = true;
       } else if (clickCount === 2) {
         secondCardClicked = cardImages[i];
         secondButtonClicked = event.target.id;
         document.getElementById(secondButtonClicked).style.color = '#0f06ff';
         timeDelay();
-        console.log(clickCount);
         document.getElementById(firstButtonClicked).disabled = false;
       }
     });
