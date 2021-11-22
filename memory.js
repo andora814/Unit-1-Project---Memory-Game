@@ -88,7 +88,7 @@ function cardsMatch() {
     clickCount = 0;
     doneArray.push(firstButtonClicked);
     doneArray.push(secondButtonClicked);
-    console.log(doneArray);
+    checkForWinner();
     return;
   } else {
     match = false;
@@ -102,6 +102,16 @@ function cardsMatch() {
 
 function timeDelay() {
   delay = setTimeout(cardsMatch, 1000);
+}
+
+function checkForWinner() {
+  if (doneArray.length === 16) {
+    gameOver = true;
+    matchMessage.innerText = 'Congratulations, you won!!';
+    return;
+  } else {
+    gameOver = false;
+  }
 }
 
 function cardClicked() {
