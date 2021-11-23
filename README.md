@@ -10,7 +10,7 @@ This is a game to test your memory!
 When the game is opened, a board will appear with 16 cards containing images of picnic baskets. The opposite sides of the cards contain images of fruits and vegetables. There are 8 pairs of cards. The objective of the game is to find all the matching pairs by remembering their locations on the board. 
 
 [Trello](https://trello.com/b/UjG8hxKY/dorans-memory-game-project)
-[Link to Game](file:///Users/doransmith/ga_seir/projects/Unit-1-Project---Memory-Game/Unit-1-Project--Memory-Game-landing-page/index.html)
+
 ***
 ### ***Technologies***
 1. HTML
@@ -22,8 +22,8 @@ To start the game, simply choose a card and click on it. The card will flip over
 ***
 ### ***Screenshots***
 #### 
-![Memory Game](/Users/doransmith/Desktop/memory_game_screenshot.png)
-<!-- I will replace the Memory Game picture with a picture of my own game once it's completed -->
+![Memory Game](https://imgur.com/a/KzeXaqK)
+
 ***
 ### ***Future Updates***
 - [ ] Flip card effect
@@ -34,6 +34,7 @@ To start the game, simply choose a card and click on it. The card will flip over
 - [ ] Timer
 ***
 ### ***Credits***
-<!-- /https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj -->
-
+#### Card Shuffle: [Fisher-Yates](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
+#### Images: [DuckDuckGo Search](https://ia.net/writer/support/general/markdown-guide)
+#### Markdown Cheatsheet: [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 ***
