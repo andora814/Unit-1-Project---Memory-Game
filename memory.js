@@ -76,6 +76,7 @@ function shuffleArray(cardImages) {
 }
 
 shuffleArray(cardImages);
+console.log(cardImages);
 
 function cardsMatch() {
   if (firstCardClicked === secondCardClicked) {

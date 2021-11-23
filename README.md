@@ -10,7 +10,8 @@ This is a game to test your memory!
 When the game is opened, a board will appear with 16 cards containing images of picnic baskets. The opposite sides of the cards contain images of fruits and vegetables. There are 8 pairs of cards. The objective of the game is to find all the matching pairs by remembering their locations on the board. 
 
 [Trello](https://trello.com/b/UjG8hxKY/dorans-memory-game-project)
-
+***
+[Surge](https://doransmithmemorygame.surge.sh/)
 ***
 ### ***Technologies***
 1. HTML
