@@ -22,7 +22,7 @@ To start the game, simply choose a card and click on it. The card will flip over
 ***
 ### ***Screenshots***
 #### 
-![Memory Game](https://imgur.com/a/KzeXaqK)
+![Memory Game](https://i.imgur.com/w6o9IGJ.png)
 
 ***
 ### ***Future Updates***
@@ -36,5 +36,4 @@ To start the game, simply choose a card and click on it. The card will flip over
 ### ***Credits***
 #### Card Shuffle: [Fisher-Yates](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
 #### Images: [DuckDuckGo Search](https://ia.net/writer/support/general/markdown-guide)
-#### Markdown Cheatsheet: [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 ***
