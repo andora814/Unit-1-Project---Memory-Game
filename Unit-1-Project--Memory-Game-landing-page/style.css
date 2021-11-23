@@ -1,4 +1,23 @@
 body {
-  color: red;
+  color: #c50b25;
   text-align: center;
+  background-image: url('https://images.pexels.com/photos/1001676/pexels-photo-1001676.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size: 1500px;
+  font-family: monospace, monaco;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  color: black;
+  background-color: white;
+  font-size: 30px;
+}
+
+a {
+  background-color: #c50b25;
+  color: white;
+  font-size: 25px;
 }
