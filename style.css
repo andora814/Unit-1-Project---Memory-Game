@@ -16,23 +16,20 @@
 }
 
 h1 {
-  border: 20px white;
-  color: #c50b25;
-  background-color: white;
+  /* border: 20px white; */
+  color: black;
+  background-color: white; 
   border-color: black;
-  border-style: solid;
+  border-style: solid; 
+  font-size: 40px;
 }
 
 .card {
-  /* background-color: white; */
-  /* background-image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Fmx86gVj41HMALOZtgQt-gHaH_%26pid%3DApi&f=1';
-  background-size: 100px 120px; */
   text-align: center;
   margin: auto;
   width: 100px;
   height: 120px;
   margin: auto;
-  /* border-radius: 25px; rounds the corners */
 }
 
 body {
@@ -48,7 +45,7 @@ body {
 p {
   border-style: none;
   background-color: white;
-  color:  #c50b25;
+  color:  black;
   text-align: center;
   font-size: 20px;
   border-color: black;
@@ -57,9 +54,8 @@ p {
 
 .button {
   grid-area: 1 / 1 / 5 / 5;
-  /* background-color: white; */
   color: black;
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Ftransparent-basket%2Ftransparent-basket-1.png&f=1&nofb=1');
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Ftransparent-basket%2Ftransparent-basket-1.png&f=1&nofb=1");
   background-size: 100px 120px;
   text-align: center;
   border-style: none;
@@ -70,17 +66,24 @@ p {
   margin: auto;
   font-family: monospace, monaco;
   font-size: 20px;
-  /* border-radius: 25px; rounds the corners */
 }
 
 #replay {
   border-style: none;
   background-color: white;
-  color:  #c50b25;
+  color:  black;
   text-align: center;
   font-size: 20px;
   border-color: black;
   border-style: solid;
 }
 
-
+a {
+  border-style: none;
+  background-color: white;
+  color:  black;
+  text-align: center;
+  font-size: 20px;
+  border-color: black;
+  border-style: solid;
+}

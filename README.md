@@ -1,10 +1,13 @@
 # Memory Game
-## Date: 11/17/2021
+## Date: 11/22/2021
 ### By: Doran Smith
 [LinkedIn](https://www.linkedin.com/in/doran-smith-66455414/)
 ***
 ### ***Description***
-#### This is a game to test your memory! When the game is started, cards will appear face down. To start the game, simply choose a card and click on it. The card will flip over and reveal an image. Click on any other card to reveal it's image. If the two cards have the same image, you have found a match and the cards will be removed from the board. If the two cards do not have the same image, you have not found a match and the cards will flip back over and remain on the board. Continue choosing cards until you find all the matches and all the cards have been removed. Upon completion of the game, a Replay button will appear. Good luck!
+####
+This is a game to test your memory!
+####
+When the game is opened, a board will appear with 16 cards containing images of picnic baskets. The opposite sides of the cards contain images of fruits and vegetables. There are 8 pairs of cards. The objective of the game is to find all the matching pairs by remembing their locations on the board. 
 
 [Trello](https://trello.com/b/UjG8hxKY/dorans-memory-game-project)
 ***
@@ -14,20 +17,22 @@
 3. JavaScript
 ***
 ### ***Getting Started***
+To start the game, simply choose a card and click on it. The card will flip over and reveal an image. Click on any other card to reveal it's image. If the two cards have the same image, you have found a match and the cards will be removed from the board. If the two cards do not have the same image, you have not found a match and the cards will flip back over and remain on the board. Continue choosing cards until you find all the matches and all the cards have been removed. If you'd like to play the game again, click on the Replay button. Good luck!
 ***
-<!-- not quite sure what to put here - is this what I need to do to get started on the project? or what the user would need to do to start playing the game? -->
-
 ### ***Screenshots***
-#### 
-![Brain](https://easyscienceforkids.com/wp-content/uploads/2018/04/Memory-facts-18-4-1-758x635.jpg)
 #### 
 ![Memory Game](https://images.101.com/edbox/2019/06/28/memorygame0628.jpg)
 <!-- I will replace the Memory Game picture with a picture of my own game once it's completed -->
 ***
 ### ***Future Updates***
+- [ ] Flip card effect
+- [ ] # of moves tracker
+- [ ] % accuracy tracker
 - [ ] Sound effects
 - [ ] Various levels of difficulty
 - [ ] Timer
 ***
 ### ***Credits***
 <!-- /https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj -->
+
+***

@@ -115,7 +115,7 @@ function timeDelay() {
 function checkForWinner() {
   if (doneArray.length === 16) {
     gameOver = true;
-    matchMessage.innerText = 'Congratulations, you won!!';
+    matchMessage.innerText = 'Congratulations, you won!!!';
     return;
   } else {
     gameOver = false;
