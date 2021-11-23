@@ -1,13 +1,20 @@
 body {
   color: #c50b25;
   text-align: center;
-  background-image: url('https://images.pexels.com/photos/1001676/pexels-photo-1001676.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-image: url('https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
   background-size: 1500px;
   font-family: monospace, monaco;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 h1 {
   font-size: 60px;
+  color: #c50b25;
+  background-color: white;
 }
 
 p {
@@ -20,4 +27,9 @@ a {
   background-color: #c50b25;
   color: white;
   font-size: 25px;
+}
+
+img {
+  text-align: center;
+  max-width: 75%;
 }
